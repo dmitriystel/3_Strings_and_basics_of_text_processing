@@ -14,40 +14,35 @@ public class Solution83 {
 		
 		String s = "The String class represents character strings";
 
-				System.out.println(longestWord(s));
+		System.out.println(findLongestWord(s));
 	}
 
-	private static String longestWord(String str) {
+	private static String findLongestWord(String str) {
 				
-		String res = "";
+		String result = "";
 		String currentWord = "";
 		int count; 
 		int max = 0;
 		
 		for (int i = 0; i < str.length(); i++) {
 			
-			if (Character.isLetter(str.charAt(i))) {
-				
+			if (Character.isLetter(str.charAt(i))) {				
 				count = 0;
 				currentWord = "";
 				
-				while(i < str.length() && Character.isLetter(str.charAt(i))) {
-					
+				while(i < str.length() && Character.isLetter(str.charAt(i))) {					
 					currentWord += str.charAt(i);
 					count++;
-					i++;
-				
+					i++;				
 				}
 				
 				if (count > max) {
 					max = count;
-					res = currentWord;
-					
+					result = currentWord;					
 				}
 			}
 		}
 		
-		return res;
-	}
-	
+		return result;
+	}	
 }

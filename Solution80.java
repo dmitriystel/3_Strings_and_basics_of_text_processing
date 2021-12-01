@@ -12,22 +12,19 @@ public class Solution80 {
 
 		String s = "Java is a high-level, class-based, object-oriented programming language";
 				
-		System.out.println(frequencyA(s));
-
+		System.out.println(countFrequencyA(s));
 	}
 	
-	private static int frequencyA(String str) {
+	private static int countFrequencyA(String str) {
 		
-		int res = 0;
+		int result = 0;
 		
-		for (int i = 0; i < str.length(); i++) {
-			
-			if (str.charAt(i) == 'a') {
-				
-				res++;
+		for (int i = 0; i < str.length(); i++) {			
+			if (str.charAt(i) == 'a') {				
+				result++;
 			}			
 		}
 		
-		return res;
+		return result;
 	}
 }

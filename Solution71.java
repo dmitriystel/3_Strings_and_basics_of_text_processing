@@ -12,10 +12,10 @@ public class Solution71 {
 		
 		String s = "yourCar hisCar herCar ourCar theirCar";
 				
-		System.out.println(toSnakeCase(s));
+		System.out.println(changeToSnakeCasee(s));
 	}
 	
-	private static String toSnakeCase(String str) {
+	private static String changeToSnakeCasee(String str) {
 
 	       char[] charArray = new char[str.length()];
 	       
@@ -23,20 +23,20 @@ public class Solution71 {
 	           charArray[i] = str.charAt(i);
 	        }
 	       		
-		String res = "";
+		String result = "";
 		
 		for (int i = 0; i < charArray.length; i++) {
 			    
 			    if (Character.isLowerCase(charArray[i])) {
-			    	res += charArray[i];
+			    	result += charArray[i];
 			    } else if (Character.isUpperCase(charArray[i])) {
-			    	res += "_" + Character.toLowerCase(charArray[i]);	    	
+			    	result += "_" + Character.toLowerCase(charArray[i]);	    	
 			    } else if(Character.isWhitespace(charArray[i])) {
-			    	res += " ";
+			    	result += " ";
 			    }			    		
 		}
 				
-		return res;
+		return result;
 	}	
 }
 

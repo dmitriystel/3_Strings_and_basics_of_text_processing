@@ -13,13 +13,13 @@ public class Solution84 {
 		
 		String s = "Строка. The String class represents character strings";
 		
-		System.out.println("number of small letters: " + numberOfSmallLetters(s));
-		System.out.println("number of capital letters: " + numberOfCapitalLetters(s));		
+		System.out.println("number of small letters: " + countNumberOfSmallLetters(s));
+		System.out.println("number of capital letters: " + countNumberOfCapitalLetters(s));		
     }
 	
-	private static int numberOfSmallLetters(String str) {
+	private static int countNumberOfSmallLetters(String str) {
 		
-		int res = 0;
+		int result = 0;
 		
 		char[] smallLetters = {'\u0061', '\u0062', '\u0063', '\u0064', '\u0065', '\u0066', '\u0067', 
 				'\u0068', '\u0069', '\u006A', '\u006B', '\u006C', '\u006D', '\u006E', '\u006F', 
@@ -29,17 +29,17 @@ public class Solution84 {
 		for (int i = 0; i < str.length(); i++) {
 			for (int j = 0; j < smallLetters.length; j++) {
 				 if(str.charAt(i) == smallLetters[j]) {
-					 res++;
+					 result++;
 				 }				
 			}
 		}
 		
-		return res;
+		return result;
 	}
 
-	private static int numberOfCapitalLetters(String str) {
+	private static int countNumberOfCapitalLetters(String str) {
 		
-		int res = 0;
+		int result = 0;
 		
 		char[] capitalLetters = {'\u0041', '\u0042', '\u0043', '\u0044', '\u0045', '\u0046', 
 				'\u0047', '\u0048', '\u0049', '\u004A', '\u004B', '\u004C', '\u004D', '\u004E', 
@@ -49,12 +49,12 @@ public class Solution84 {
 		for (int i = 0; i < str.length(); i++) {
 			for (int j = 0; j < capitalLetters.length; j++) {
 				 if(str.charAt(i) == capitalLetters[j]) {
-					 res++;
+					 result++;
 				 }				
 			}
 		}
 		
-		return res;
+		return result;
 	}
 }
 

@@ -46,7 +46,6 @@ public class Solution87 {
                 "</notes> ";
         System.out.println(xmlDocument + "\n");
         xmlParse(xmlDocument);
-
     }
 
     static void xmlParse(String xmlDocument) {

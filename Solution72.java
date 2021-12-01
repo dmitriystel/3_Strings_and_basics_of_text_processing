@@ -12,34 +12,33 @@ public class Solution72 {
 	
 		String s = "word is a word processor developed by Microsoft";
 				
-		System.out.println(wortToLetter(s));				
+		System.out.println(changeWordToLetter(s));				
     }
 	
-	private static String wortToLetter(String str) {
+	private static String changeWordToLetter(String str) {
 		
-		String res = "";
+		String result = "";
 			
 	       char[] charArray = new char[str.length()];
+	       
 	       for (int i = 0; i < str.length(); i++) {
 	           charArray[i] = str.charAt(i);	              
 	        }
 	       
 	       for(int j = 0; j < charArray.length; j++) {
 	    	   
-	    	   if (    (Character.toString(charArray[j]).equals("w")) &&
+	    	   if ((Character.toString(charArray[j]).equals("w")) &&
 	    	       (Character.toString(charArray[j + 1]).equals("o")) &&
 	    		   (Character.toString(charArray[j + 2]).equals("r")) &&
 	    		   (Character.toString(charArray[j + 3]).equals("d"))) {
-	    		   res += "letter";
+	    		   result += "letter";
 	    		   j += 3;
 	    		   
-	    	   } else res += (Character.toString(charArray[j]));
-	    	   
+	    	   } else result += (Character.toString(charArray[j]));	    	   
 	       }
 				
-		return res;
-	}
-	
+		return result;
+	}	
 }
 		
 		    

@@ -13,20 +13,19 @@ public class Solution82 {
 	
 		String s = "Java is a high-level, class-based, object-oriented programming language";;
 			
-		System.out.println(removeDuplicatecharacters(s));		
+		System.out.println(removeDuplicateCharacters(s));		
 	}
 
-	private static String removeDuplicatecharacters(String str) {
+	private static String removeDuplicateCharacters(String str) {
 		
-		String res = "";
+		String result = "";
 		
-		for (int i = 0; i < str.length(); i++) {
-						
-			if (! Character.isWhitespace(str.charAt(i)) && ! res.contains(Character.toString(str.charAt(i)))) {
-				res += str.charAt(i);		
+		for (int i = 0; i < str.length(); i++) {						
+			if (! Character.isWhitespace(str.charAt(i)) && ! result.contains(Character.toString(str.charAt(i)))) {
+				result += str.charAt(i);		
 			} 			
 		}
 		
-		return res;
+		return result;
 	}	
 }

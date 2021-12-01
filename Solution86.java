@@ -42,9 +42,7 @@ public class Solution86 {
 		System.out.println();
         System.out.println(sortingWordsbyLength(s));
         System.out.println("Sorted lexems in a sentence in descending order:");
-		System.out.println(descendingLexemsInSentence(s));
-		
-		
+		System.out.println(descendingLexemsInSentence(s));				
 	}
 	
 	private static String sortingWordsbyLength(String str) {
@@ -57,10 +55,8 @@ public class Solution86 {
         String res1 = "";        
         String result = ""; 
 	    
-	    while (matcher.find()) {
-	        
-	        sentence = str.substring(matcher.start(), matcher.end());
-	        
+	    while (matcher.find()) {	        
+	        sentence = str.substring(matcher.start(), matcher.end());	        
 	        words = sentence.split("\\s*(\\s|,|!|\\.)\\s*");
 	        														        	       
 	        String temp = null;
@@ -95,46 +91,39 @@ public class Solution86 {
 		String [] text = new String[3]; 
 		int [] numOfsentences = new int [3]; 
 		
-		String paragraph = ""; // �����
+		String paragraph = "";
 		
-	    Pattern pattern = Pattern.compile("(?sm)^.*?\\.\\s*$");
-	 
+	    Pattern pattern = Pattern.compile("(?sm)^.*?\\.\\s*$");	 
 	    Matcher matcher = pattern.matcher(str);
 	    
     	int i = 0;
-	    while (matcher.find()) {
-	        
-	        paragraph = str.substring(matcher.start(), matcher.end());
-	        
+	    while (matcher.find()) {	        
+	        paragraph = str.substring(matcher.start(), matcher.end());	        
 	        text [i] = paragraph;
 	        i++;
 		
 	}
 	    	    
-	    for (int j = 0; j < text.length; j++) {
-	    
+	    for (int j = 0; j < text.length; j++) {	    
 	    	int counter = 0; 
 	    	
 	    Pattern pattern1 = Pattern.compile("[A-Z].+?\\.|!|\\?");
 	    Matcher matcher1 = pattern1.matcher(text[j]);
 	    
-	    while (matcher1.find()) {
-	        
+	    while (matcher1.find()) {	        
 	        text[j].substring(matcher1.start(), matcher1.end());
-
 	        counter++;	        	       	        	   	        	        
 	    }
 	    
 	    numOfsentences[j] = counter;
-	    	    
+	    
 	    }
 	    	
 	    int temp = 0; 
 	    String temp1 = null; 
 	    
 	    for (int k = 0; k < numOfsentences.length - 1; k++) {
-	    	for (int l = k + 1; l < numOfsentences.length; l++) {
-	    	
+	    	for (int l = k + 1; l < numOfsentences.length; l++) {	    	
 	    		if (numOfsentences[k] > numOfsentences[l]) {
 	    		
 	    			temp = numOfsentences[l]; 
@@ -143,24 +132,19 @@ public class Solution86 {
 	    				    			
 	    			temp1 = text[l];
 	    			text[l] = text[k];
-	    			text[k] = temp1; 
-	    			
+	    			text[k] = temp1; 	    			
 	    		}
 	    	}
 	    }
-	    
-	    
-	    for (String elem : text) {
-	    	
+	    	    
+	    for (String elem : text) {	    	
 	    	result += elem; 
-	    }
-	    
+	    }	    
 		return result;
 	}
 	
 	
-	private static String descendingLexemsInSentence(String str) {
-		
+	private static String descendingLexemsInSentence(String str) {		
 	    Pattern pattern = Pattern.compile("[A-Z].+?\\.|!|\\?");
 	    Matcher matcher = pattern.matcher(str); 
 	    
@@ -169,18 +153,14 @@ public class Solution86 {
               
         String result = ""; 
   
-	    while (matcher.find()) {
-	    	
-	    	int elements = 0;
-	        
-	        sentence = str.substring(matcher.start(), matcher.end());
-	        
+	    while (matcher.find()) {	    	
+	    	int elements = 0;	        
+	        sentence = str.substring(matcher.start(), matcher.end());	        
 	        words = sentence.split("\\s*(\\s|,|!|\\.)\\s*");
 	        														        	       
 	        String temp = null;
 	        	        
-	        for (int i = 0; i < words.length; i++) {
-	        	
+	        for (int i = 0; i < words.length; i++) {	        	
 	        	if (words[i].contains(String.valueOf("a"))){
 	        		elements++;
 	        	}	        	
@@ -191,8 +171,7 @@ public class Solution86 {
 	        
 	        int j = 0; 
 	        
-	        for (int i = 0; i < words.length; i++) {
-	        	
+	        for (int i = 0; i < words.length; i++) {        	
 	        	if (words[i].contains(String.valueOf("a"))){
 	        		words1[j] = words[i];
 	        		j++;
@@ -201,13 +180,11 @@ public class Solution86 {
 	        	        
 	        String word = null; 
    		
-	        for (int i = 0; i < words1.length; i++) {
-	        	
+	        for (int i = 0; i < words1.length; i++) {	        	
 	        	word = words1[i];
 	    		int count = 0; 
 	        		    		
-	        	for (int k = 0; k < word.length(); k++) {
-	        		
+	        	for (int k = 0; k < word.length(); k++) {	        		
 	        		if (word.charAt(k) == 'a') {
 	        			count++;
 	        		}	        		
@@ -220,8 +197,7 @@ public class Solution86 {
 		    String temp2 = null; 
 		    		    
 		    for (int k = 0; k < words1nrElem.length - 1; k++) {
-		    	for (int l = k + 1; l < words1nrElem.length; l++) {
-		    	
+		    	for (int l = k + 1; l < words1nrElem.length; l++) {		    	
 		    		if (words1nrElem[k] < words1nrElem[l]) {
 		    		
 		    			temp1 = words1nrElem[l]; 
@@ -232,8 +208,7 @@ public class Solution86 {
 		    			words1[l] = words1[k];
 		    			words1[k] = temp2; 
 		    			
-		    		} else if (words1nrElem[k] == words1nrElem[l]) {
-		    			
+		    		} else if (words1nrElem[k] == words1nrElem[l]) {		    			
 		    			if (words1[k].charAt(0) > words1[l].charAt(0)){
 		    			
 			    			temp1 = words1nrElem[l]; 
@@ -249,13 +224,11 @@ public class Solution86 {
 		    	}
 		    }
 	        
-		    for (String elem : words1) {
-		    	
+		    for (String elem : words1) {		    	
 		    	result += elem + " "; 
 		    }
 		    
-		    result += "\n";
-	          	        	       	        	   	        	        
+		    result += "\n";	          	        	       	        	   	        	        
 	    }
 	    
 		return result;

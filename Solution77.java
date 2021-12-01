@@ -12,21 +12,21 @@ public class Solution77 {
 		
 		String s = "Java is a high-level, class-based, object-oriented programming language";
 				
-		System.out.println(bAfterA(s));
+		System.out.println(insertBAfterA(s));
 	}
 	
-	private static String bAfterA(String str) {
+	private static String insertBAfterA(String str) {
 
-		String res = "";
+		String result = "";
  
 	     for(int j = 0; j < str.length(); j++) {
 	    	 
 	    	 if (str.charAt(j) == 'a') {
-	    		 res += "ab";
+	    		 result += "ab";
 	    		   
-	    	 } else res += str.charAt(j);	   
+	    	 } else result += str.charAt(j);	   
 	      } 
 	      	      		
-		return res;
+		return result;
 	}
 }

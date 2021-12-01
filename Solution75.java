@@ -12,14 +12,14 @@ public class Solution75 {
 	public static void main(String[] args) {
 		
 		String s = "Java  is   a  high-level, class-based,     object-oriented  "
-				+ "       programming   language      ";
+				 + "       programming   language      ";
 				
-		System.out.println(whiteSpace(s));
+		System.out.println(removeExtraSpaces(s));
 	}
 	
-	private static String whiteSpace(String str) {
+	private static String removeExtraSpaces(String str) {
 
-		String res = "";
+		String result = "";
 
 		 char[] charArray = new char[str.length()];
 		 
@@ -30,7 +30,7 @@ public class Solution75 {
 	      for(int j = 0; j < charArray.length; j++) {
 
 	    	  if (Character.isLetter(charArray[j])) {
-	    		  res += (Character.toString(charArray[j]));
+	    		  result += (Character.toString(charArray[j]));
 	    		  
 	    	  } else if (Character.isWhitespace(charArray[j])) {
 	    		   
@@ -42,15 +42,14 @@ public class Solution75 {
 	    		   if (j < charArray.length) {
 	    			   if (Character.isLetter(charArray[j])) {
 	    		
-	    			   res += " " + (Character.toString(charArray[j]));
+	    				   result += " " + (Character.toString(charArray[j]));
 	    			   
 	    			   } 
 	    		   }
 	    		   
-	    	   } else res += (Character.toString(charArray[j]));	   
+	    	   } else result += (Character.toString(charArray[j]));	   
 	      } 
 	      	      		
-		return res;
+		return result;
 	}
-
 }

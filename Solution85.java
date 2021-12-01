@@ -22,21 +22,21 @@ public class Solution85 {
 				+ " of the United Kingdom. Nowhere is there any mention of the word"
 				+ " England!";
 		
-		System.out.println(numberOfSentences(s));
+		System.out.println(countNumberOfSentences(s));
 		
 	}
 	
-	private static int numberOfSentences(String str) {
+	private static int countNumberOfSentences(String str) {
 		
-		int res = 0;
+		int result = 0;
 		
 		for (int i = 0; i < str.length(); i++) {
 		
 			if (str.charAt(i) == '.' || str.charAt(i) == '?' || str.charAt(i) == '!'  ) {
-				res++;
+				result++;
 			}
 		}
 				
-		return res;
+		return result;
 	}
 }

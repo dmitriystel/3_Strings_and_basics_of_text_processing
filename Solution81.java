@@ -12,18 +12,17 @@ public class Solution81 {
 
 		String s = "Java is a high-level, class-based, object-oriented programming language";
 
-		System.out.println(doubleSymbol(s));
+		System.out.println(createNewStringWithDoubleSymbol(s));
 	}
 
-	private static String doubleSymbol(String str) {
+	private static String createNewStringWithDoubleSymbol(String str) {
 		
-		String res = "";
+		String result = "";
 		
-		for (int i = 0; i < str.length(); i++) {
-			
-			res = res + str.charAt(i) + str.charAt(i);
+		for (int i = 0; i < str.length(); i++) {			
+			result = result + str.charAt(i) + str.charAt(i);
 		}
 		
-		return res;
+		return result;
 	}
 }

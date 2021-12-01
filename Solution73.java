@@ -14,14 +14,15 @@ public class Solution73 {
 				+ "based on membership within the United Nations System: 193 member "
 				+ "states, 2 observer states and 11 other states.";
 			
-		System.out.println(numberOfdigits(s));
+		System.out.println(countTheNumberOfDigits(s));
 	}
 
-	private static int numberOfdigits(String str) {
+	private static int countTheNumberOfDigits(String str) {
 		
-		int res = 0;
+		int result = 0;
 		
 		 char[] charArray = new char[str.length()];
+		 
 	       for (int i = 0; i < str.length(); i++) {
 	           charArray[i] = str.charAt(i);	              
 	        }
@@ -29,9 +30,10 @@ public class Solution73 {
 	       for(int j = 0; j < charArray.length; j++) {
 	    	   
 	    	   if (Character.isDigit(charArray[j])) {
-	    		   res += 1;
+	    		   result++;
 	    	   }    		   
 	      } 
-	    return res;		
+	       
+	    return result;		
 	}	
 }
